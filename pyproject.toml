@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "transformer-quantization-lab"
+version = "0.1.0"
+description = "A practical reference for Transformer PTQ, ONNX Runtime benchmarking, and an illustrative PyTorch QAT workflow."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=1.26",
+    "onnxruntime>=1.17",
+    "optimum-onnx[onnxruntime]>=0.1.0",
+    "datasets>=2.18",
+    "transformers>=4.40",
+    "torch>=2.2",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+quantization-lab = "quantization_reference:main"
+
+[tool.setuptools]
+py-modules = ["quantization_reference"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

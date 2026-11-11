@@ -1,0 +1,43 @@
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local secrets / editor / OS files
+.env
+.env.*
+!.env.example
+.DS_Store
+.vscode/
+.idea/
+
+# Downloaded model and dataset caches
+.cache/
+hf_cache/
+.cache/huggingface/
+
+# Generated model artifacts (large binaries)
+onnx_fp32/
+onnx_fp32_*/
+onnx_dynamic_int8/
+onnx_dynamic_int8_*/
+onnx_static_int8/
+onnx_static_int8_*/
+*.onnx
+*.onnx_data
+*.pt
+*.pth
+*.safetensors
+augmented_model.onnx
+
+# Course-provided source material and local experiments are not redistributed
+*_Quantization_Activity_*.ipynb
+coursera_quantization_code.py
+assign1.txt
+
+# Stray editor export artifact
+.[_65f0b0bc06854b1f9343b984c7598bee_Quantization_Activity_SCAFFOLD.ipynb](http:*
